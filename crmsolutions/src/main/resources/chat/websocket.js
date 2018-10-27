@@ -2,9 +2,9 @@
 let id = id => document.getElementById(id);
 
 //Establish the WebSocket connection and set up event handlers
-let ws = new WebSocket("ws://" + location.hostname + ":" + location.port + "/chat");
+let ws = new WebSocket("ws://" + location.hostname + ":" + location.port + location.pathname);
 ws.onmessage = msg => updateChat(msg);
-ws.onclose = () => alert("WebSocket connection closed");
+ws.onclose = () => console.log("WebSocket connection closed");
 
 // Add event listeners to button and input field
 id("send").addEventListener("click", () => sendAndClear(id("message").value));

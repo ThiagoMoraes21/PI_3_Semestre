@@ -1,6 +1,8 @@
 package app;
 
+import app.util.Path;
 import io.javalin.Javalin;
+import io.javalin.staticfiles.Location;
 import io.javalin.websocket.WsSession;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -22,6 +24,7 @@ public class Chat {
     public static void main(String[] args) {
         Javalin.create()
                 .enableStaticFiles("/public")
+                .enableStaticFiles("/chat")
                 .ws("/chat", ws -> {
                     ws.onConnect(session -> {
                         String username = "User" + nextUserNumber++;
