@@ -3,9 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
+    <link rel="stylesheet" href="/css/lib/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-    <h1>Home Page</h1>
-    <a href="/chat.html">Go to chat</a>
+  <!-- <img class="homeBg" src="https://search.unsplash.com/h7EIo10-yrQ" alt="some team image background"> -->
+    <div class="container homeBg">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">CRM Solutions</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
+              <li><a href="#">Sobre</a></li>
+              <li><a href="#">Contato</a></li>
+            </ul>
+
+            <!-- <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">Login</a></li>
+            </ul> -->
+            <button type="button" class="btn btn-default navbar-btn navbar-right">
+              <a href="/chat">Sign in</a>
+            </button>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+
+    <div class="row">
+        <div class="container wecome col-md-4 col-sm-0">
+          <div class="wecomeTxt">
+            <h1>A melhor ferramenta de gestão e comunicação empresarial do mercado</h1>
+          </div>
+        </div>
+        <div class="container signIn col-md-6 col-sm-12">
+          <h1>Sign In</h1>
+          <form class="sign">
+            <div class="form-group">
+              <input type="email" placeholder="E-mail">
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="Nome">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="senha">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="confirme a senha">
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-submit">Registrar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="/js/lib/jquery-3.3.1.min.js"></script>
 </body>
 </html>
