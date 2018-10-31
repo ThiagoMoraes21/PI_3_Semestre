@@ -10,8 +10,7 @@
 }
 
 html,body {
-    height: 100%;
-    overflow: hidden;
+    height: 800px;
 }
 
 body:before {
@@ -20,7 +19,8 @@ body:before {
     position: absolute;
     top: 0;
     left: 0;
-    background: #128ff2;
+    background-image: url('img/bg_1.jpg');
+    background-size: cover;
     content: "";
     z-index: 0;
 }
@@ -93,6 +93,7 @@ button.primary {
 
 button.accent {
     background-color: #ff4743;
+    border-radius: 5px;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
     color: #fff;
 }
@@ -104,7 +105,7 @@ button.accent {
 .username-page-container {
     background: #fff;
     box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
-    border-radius: 2px;
+    border-radius: 5px;
     width: 100%;
     max-width: 500px;
     display: inline-block;
@@ -221,6 +222,10 @@ button.accent {
     width: 80px;
     height: 38px;
     margin-left: 5px;
+}
+
+.input-group {
+  width: 100%;
 }
 
 .chat-header {
