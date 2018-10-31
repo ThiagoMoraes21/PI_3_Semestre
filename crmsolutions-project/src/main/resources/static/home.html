@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-    <link rel="stylesheet" href="/css/lib/bootstrap.min.css">
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="/css/main.css">
-</head>
-<body>
-  <!-- <img class="homeBg" src="https://search.unsplash.com/h7EIo10-yrQ" alt="some team image background"> -->
-    <div class="container homeBg">
-      <nav class="navbar navbar-inverse">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
         <div class="container-fluid">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
@@ -24,51 +24,50 @@
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="/home.html">Home <span class="sr-only">(current)</span></a></li>
               <li><a href="#">Sobre</a></li>
               <li><a href="#">Contato</a></li>
+              <button type="button" class="btn btn-primary navbar-btn navbar-right">
+                <a href="/chat.html" class="btn-a">Sign in</a>
+              </button>
             </ul>
 
-            <!-- <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">Login</a></li>
-            </ul> -->
-            <button type="button" class="btn btn-default navbar-btn navbar-right">
-              <a href="/chat">Sign in</a>
-            </button>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
-      </nav>
+      </div>
+    </nav>
 
-    <div class="row">
-        <div class="container wecome col-md-4 col-sm-0">
-          <div class="wecomeTxt">
-            <h1>A melhor ferramenta de gestão e comunicação empresarial do mercado</h1>
-          </div>
+    <div class="container land-page-container">
+      <div class="row land-page">
+        <div class="container col-md-7 land-page-img">
+          <img src="css/img/bg_1.jpg">
         </div>
-        <div class="container signIn col-md-6 col-sm-12">
-          <h1>Sign In</h1>
-          <form class="sign">
-            <div class="form-group">
-              <input type="email" placeholder="E-mail">
-            </div>
-            <div class="form-group">
-              <input type="text" placeholder="Nome">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="senha">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="confirme a senha">
-            </div>
-            <div class="form-group">
-              <button type="submit" class="btn btn-primary btn-submit">Registrar</button>
-            </div>
-          </form>
+        <div class="container col-md-5 title">
+          <h1>A melhor ferramenta de gestão e comunicação empresaria do mercado</h1>
+          <button type="button" class="btn btn-primary btn-lg">Registrar-se</button>
         </div>
       </div>
+      <div class="container sobre">
+        <br> <h2>Sobre a CRM Solutions</h2> <br><br>
+        <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
+        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+      </div>
+      <div class="container contato">
+        <h2>Contate-nos</h2> <br>
+        <div class="input-group">
+          <input type="email" class="form-control" placeholder="E-mail" aria-describedby="basic-addon1">
+        </div>
+        <textarea class="form-control" rows="3"></textarea>
+        <button type="button" class="btn btn-primary btn-lg btn-contato">Enviar</button>
+      </div>
+      <footer></footer>
     </div>
-    <script src="/js/lib/jquery-3.3.1.min.js"></script>
-</body>
+
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  </body>
 </html>
