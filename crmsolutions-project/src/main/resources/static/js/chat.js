@@ -1,3 +1,5 @@
+console.log("CHAT CONNECTED!");
+
 'use strict';
 
 var usernamePage = document.querySelector('#username-page');

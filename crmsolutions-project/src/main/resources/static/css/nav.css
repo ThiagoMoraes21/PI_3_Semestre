@@ -51,3 +51,22 @@ a {
     box-shadow: none;
     margin-top: 3px;
 }
+
+.navbar-inverse .navbar-toggle {
+    border-color: #FF8264;
+    background-color: #FF8264;
+}
+
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+    background-color: #f95a34;
+}
+
+.navbar-collapse-color {
+  background-color: #FF8264;
+  transition: all 0.2s ease-in-out;
+}
+
+.pushChat {
+  top: 73%!important;
+  transition: all 0.3s ease-in-out;
+}
