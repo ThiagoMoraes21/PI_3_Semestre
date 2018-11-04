@@ -1,4 +1,4 @@
-console.log("Dashboard CHUTANDO A SUA AVÓ!");
+console.log("Dashboard CHUTANDO A SUA BRUNA!");
 
  'use strict';
 
@@ -9,6 +9,9 @@ console.log("Dashboard CHUTANDO A SUA AVÓ!");
  var messageInput = document.querySelector('#message');
  var messageArea = document.querySelector('#messageArea');
  var connectingElement = document.querySelector('.connecting');
+
+ var storedMessages = [];
+ var num = 0;
 
  var stompClient = null;
  var username = null;
@@ -70,35 +73,42 @@ messageForm.addEventListener('submit', sendMessage, true)
      event.preventDefault();
  }
 
+ function storeMessage(msg) {
+   storedMessages[num] = msg;
+   num++;
+   console.log("Function storedMessages() was called!");
+   console.log("THIS IS THE NEW MESSAGE OBJECT " + msg);
+ }
+
+ function loadMessages() {
+   console.log("loadMessages() was CALLED!");
+   storedMessages.forEach(function(msg){
+     onMessageReceived(msg);
+   });
+ }
 
  function onMessageReceived(payload) {
      var message = JSON.parse(payload.body);
 
      var messageElement = document.createElement('li');
 
-      if(message.type === 'JOIN') {
-          // messageElement.classList.add('event-message');
-          // message.content = message.sender + ' joined!';
-      } else if (message.type === 'LEAVE') {
-          // messageElement.classList.add('event-message');
-          // message.content = message.sender + ' left!';
-      } else {
-         messageElement.classList.add('chat-message');
+     messageElement.classList.add('chat-message');
 
-         var avatarElement = document.createElement('i');
-         var avatarText = document.createTextNode(message.sender[0]);
-         avatarElement.appendChild(avatarText);
-         avatarElement.style['background-color'] = getAvatarColor(message.sender);
+     var avatarElement = document.createElement('i');
+     var avatarText = document.createTextNode(message.sender[0]);
+     avatarElement.appendChild(avatarText);
+     avatarElement.style['background-color'] = getAvatarColor(message.sender);
 
-         messageElement.appendChild(avatarElement);
+     messageElement.appendChild(avatarElement);
 
-         var usernameElement = document.createElement('span');
-         var usernameText = document.createTextNode(message.sender);
-         usernameElement.appendChild(usernameText);
-         messageElement.appendChild(usernameElement);
-     }
+     var usernameElement = document.createElement('span');
+     var usernameText = document.createTextNode(message.sender);
+     usernameElement.appendChild(usernameText);
+     messageElement.appendChild(usernameElement);
 
-     if(message.type !== 'JOIN' && message.type !== 'LEAVE'){
+     // Não executa no caso do usuário entrar ou sair da dashboard
+     if(message.type === 'CHAT'){
+         storeMessage(payload);
          var textElement = document.createElement('p');
          var messageText = document.createTextNode(message.content);
          textElement.appendChild(messageText);
