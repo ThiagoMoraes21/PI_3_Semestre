@@ -7,7 +7,7 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="css/lib/bootstrap.min.css"> -->
-    <link rel="stylesheet" href="css/chat.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
     <link rel="stylesheet" href="css/nav.css">
 </head>
 <body>
@@ -32,10 +32,10 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/chat">Chat</a></li>
-                    <li><a href="/home">Home</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="/chat.html">Chat</a></li>
+                    <li><a href="/home.html">Home</a></li>
+                    <li><a href="/home.html#sobre">Sobre</a></li>
+                    <li><a href="/home.html#contato">Contato</a></li>
                     <button type="button" class="btn btn-link navbar-right">
                         <a href="/chat">Login</a>
                     </button>
@@ -74,8 +74,8 @@
         <form id="messageForm" name="messageForm">
             <div class="form-group">
                 <div class="input-group clearfix">
-                    <input type="text" id="message" placeholder="Type a message..." autocomplete="off" class="form-control"/>
-                    <button type="submit" class="primary">Send</button>
+                    <input type="text" id="message" placeholder="Escreva uma tarefa..." autocomplete="off" class="form-control"/>
+                    <button type="submit" class="primary">Add</button>
                 </div>
             </div>
         </form>

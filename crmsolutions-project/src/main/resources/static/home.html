@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Test</title>
     <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/lib/bootstrap.min.css">
@@ -29,8 +30,8 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
               <li class="active"><a href="/home.html">Home <span class="sr-only">(current)</span></a></li>
-              <li><a href="#">Sobre</a></li>
-              <li><a href="#">Contato</a></li>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#contato">Contato</a></li>
               <button type="button" class="btn btn-link navbar-right">
                 <a href="/chat.html">Login</a>
               </button>
@@ -51,12 +52,12 @@
           <button type="button" class="btn btn-primary btn-lg">Registrar-se</button>
         </div>
       </div>
-      <div class="container sobre">
+      <div id="sobre" class="container sobre">
         <br> <h2>Sobre a CRM Solutions</h2> <br><br>
         <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
         <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
       </div>
-      <div class="container contato">
+      <div id="contato" class="container contato">
         <h2>Contate-nos</h2> <br>
         <div class="input-group">
           <input type="email" class="form-control" placeholder="E-mail" aria-describedby="basic-addon1">
@@ -64,7 +65,22 @@
         <textarea class="form-control" rows="3"></textarea>
         <button type="button" class="btn btn-primary btn-lg btn-contato">Enviar</button>
       </div>
-      <footer></footer>
+
+      <footer>
+          <div class="footer-left">
+            <p class="footer-links">
+              <a href="/">Home</a>
+              <a href="#sobre">Sobre</a>
+              <a href="#contato">Contato</a>
+            </p>
+            <p>CRM Solutions &copy; 2018</p>
+          </div>
+          <div class="footer-right">
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-twitter-square"></i></a>
+            <a href="#"><i class="fab fa-github-square"></i></a>
+          </div>
+        </footer>
     </div>
 
     <!-- SockJS -->

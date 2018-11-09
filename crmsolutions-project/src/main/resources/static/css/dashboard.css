@@ -1,8 +1,6 @@
 /*
-    CHAT PAGE
+    DASHBOARD PAGE
 */
-
-
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -160,9 +158,9 @@ button.accent {
 
 #chat-page ul li {
     line-height: 1.5rem;
-    padding: 10px 20px;
-    margin: 0;
-    border-bottom: 1px solid #f4f4f4;
+    padding: 16px 20px;
+    margin: 10px 15%;
+    box-shadow: 5px 5px 15px rgba(111, 162, 251, 0.3);
 }
 
 #chat-page ul li p {
@@ -191,6 +189,7 @@ button.accent {
     width: 42px;
     height: 42px;
     overflow: hidden;
+    top: 3px;
     left: 10px;
     display: inline-block;
     vertical-align: middle;
@@ -204,8 +203,7 @@ button.accent {
 }
 
 #chat-page .chat-message span {
-    color: #333;
-    font-weight: 600;
+  display: none;
 }
 
 #chat-page .chat-message p {
@@ -246,6 +244,17 @@ button.accent {
     position: absolute;
     top: 65px;
     width: 100%;
+}
+
+input[type=checkbox], input[type=radio] {
+    float: right;
+    margin-top: -12px;
+}
+
+.checked {
+  background-color: #e0e0e0;
+  color: grey;
+  text-decoration: line-through;
 }
 
 

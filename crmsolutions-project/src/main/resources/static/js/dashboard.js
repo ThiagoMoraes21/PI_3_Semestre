@@ -1,4 +1,4 @@
-console.log("Dashboard CHUTANDO A SUA BRUNA!");
+console.log("Dashboard IS NOT IN THE CACHE!");
 
  'use strict';
 
@@ -21,8 +21,8 @@ console.log("Dashboard CHUTANDO A SUA BRUNA!");
      '#ffc107', '#ff85af', '#FF9800', '#39bbb0'
  ];
 
-usernameForm.addEventListener('submit', connect, true)
-messageForm.addEventListener('submit', sendMessage, true)
+usernameForm.addEventListener('submit', connect, true);
+messageForm.addEventListener('submit', sendMessage, true);
 
  function connect(event) {
      username = document.querySelector('#name').value.trim();
@@ -61,6 +61,7 @@ messageForm.addEventListener('submit', sendMessage, true)
 
  function sendMessage(event) {
      var messageContent = messageInput.value.trim();
+     var inputCheck = document.querySelectorAll('input[type="checkbox"]');
      if(messageContent && stompClient) {
          var chatMessage = {
              sender: username,
@@ -73,26 +74,32 @@ messageForm.addEventListener('submit', sendMessage, true)
      event.preventDefault();
  }
 
+
+/***********************
+  Bug
+  A função só armazena no array as menssagens de cada usuário
+  separadas por página. Ao invés de armazenar TODAS as menssagens criadas
+***********************/
+// Armazena menssagens do usuário em um array
  function storeMessage(msg) {
    storedMessages[num] = msg;
    num++;
-   console.log("Function storedMessages() was called!");
-   console.log("THIS IS THE NEW MESSAGE OBJECT " + msg);
  }
 
- function loadMessages() {
-   console.log("loadMessages() was CALLED!");
-   storedMessages.forEach(function(msg){
-     onMessageReceived(msg);
-   });
- }
+var selectCheckBox = document.querySelector('input');
 
  function onMessageReceived(payload) {
      var message = JSON.parse(payload.body);
 
      var messageElement = document.createElement('li');
-
      messageElement.classList.add('chat-message');
+
+     var checkBox = document.createElement('input');
+     checkBox.type = 'checkbox';
+
+     checkBox.addEventListener('click', function(){
+         messageElement.classList.toggle('checked');
+     });
 
      var avatarElement = document.createElement('i');
      var avatarText = document.createTextNode(message.sender[0]);
@@ -106,7 +113,7 @@ messageForm.addEventListener('submit', sendMessage, true)
      usernameElement.appendChild(usernameText);
      messageElement.appendChild(usernameElement);
 
-     // Não executa no caso do usuário entrar ou sair da dashboard
+     // Executa caso o payload recebido seja do tipo CHAT
      if(message.type === 'CHAT'){
          storeMessage(payload);
          var textElement = document.createElement('p');
@@ -114,8 +121,8 @@ messageForm.addEventListener('submit', sendMessage, true)
          textElement.appendChild(messageText);
 
          messageElement.appendChild(textElement);
-
          messageArea.appendChild(messageElement);
+         messageElement.appendChild(checkBox);
          messageArea.scrollTop = messageArea.scrollHeight;
      }
  }
