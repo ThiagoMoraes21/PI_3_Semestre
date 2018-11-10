@@ -32,6 +32,7 @@ img {
   letter-spacing: 1px;
   text-align: center;
   color: #fff;
+  float: right;
 }
 
 .land-page-img {
@@ -49,6 +50,7 @@ img {
   color: #365ED9;
   text-align: center;
   font-size: 1.4em;
+  margin-top: -10px;
 }
 
 .sobre h1 {
@@ -131,10 +133,16 @@ footer .footer-right a{
 	line-height: 35px;
 	margin-left: 3px;
 }
+.col-md-7 {
+    position: absolute;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
 
 /* If you don't want the footer to be responsive, remove these media queries */
 
-@media (max-width: 600px) {
+@media (max-width: 985px) {
 
 	footer .footer-left,
 	footer .footer-right{
@@ -149,4 +157,14 @@ footer .footer-right a{
 	footer .footer-left p.footer-links{
 		line-height: 1.8;
 	}
+
+  .title {
+    background-image: linear-gradient(to right, #ed78b8, #FF8264);
+    width: 80%;
+    float: none;
+    height: 34%;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(112, 141, 247, 0.4);
+  }
 }
