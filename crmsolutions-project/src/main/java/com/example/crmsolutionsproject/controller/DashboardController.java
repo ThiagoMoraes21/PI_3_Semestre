@@ -11,9 +11,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class DashboardController {
-    @RequestMapping("/dashboard") //Define a url que quando for requisitada chamara o metodo
+    //  Define a url de requisição da dashboard
+    @RequestMapping("/dashboard")
     public ModelAndView dashboard() {
-        //Retorna a view que deve ser chamada
+        //Retorna a view que deve ser renderizada no browser
         return new ModelAndView("dashboard.html");
     }
 
@@ -26,7 +27,7 @@ public class DashboardController {
     @MessageMapping("/dashboard.addUser")
     @SendTo("/topic/public/dash")
     public ChatMessage addUser(@Payload ChatMessage chatMessage, SimpMessageHeaderAccessor headerAccessor) {
-        // Add username in web socket session
+        // Add username em uma sessão websocket
         headerAccessor.getSessionAttributes().put("username", chatMessage.getSender());
         return chatMessage;
     }

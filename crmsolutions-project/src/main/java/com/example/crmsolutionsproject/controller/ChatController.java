@@ -11,9 +11,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class ChatController {
-    @RequestMapping("/chat") //Define a url que quando for requisitada chamara o metodo
+    //Define a url do chat
+    @RequestMapping("/chat")
     public ModelAndView chat() {
-        //Retorna a view que deve ser chamada
+        //  Retorna a view que deve ser renderezada no browser
         return new ModelAndView("chat.html");
     }
 
@@ -26,7 +27,7 @@ public class ChatController {
     @MessageMapping("/chat.addUser")
     @SendTo("/topic/public")
     public ChatMessage addUser(@Payload ChatMessage chatMessage, SimpMessageHeaderAccessor headerAccessor) {
-        // Add username in web socket session
+        // Add username em uma sessão websocket
         headerAccessor.getSessionAttributes().put("username", chatMessage.getSender());
         return chatMessage;
     }

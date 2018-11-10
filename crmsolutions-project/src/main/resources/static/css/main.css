@@ -140,8 +140,6 @@ footer .footer-right a{
     padding-left: 15px;
 }
 
-/* If you don't want the footer to be responsive, remove these media queries */
-
 @media (max-width: 985px) {
 
 	footer .footer-left,

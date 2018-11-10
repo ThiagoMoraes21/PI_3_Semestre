@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.socket.messaging.SessionConnectedEvent;
 import org.springframework.web.socket.messaging.SessionDisconnectEvent;
 
+// Escuta por novas conexões ou desconexões de usuários
 @Component
 public class WebSocketEventListener {
 
@@ -21,7 +22,7 @@ public class WebSocketEventListener {
 
     @EventListener
     public void handleWebSocketConnectListener(SessionConnectedEvent event) {
-        logger.info("Received a new web socket connection");
+        logger.info("Recebido nova conexão web socket");
     }
 
     @EventListener
@@ -30,7 +31,7 @@ public class WebSocketEventListener {
 
         String username = (String) headerAccessor.getSessionAttributes().get("username");
         if(username != null) {
-            logger.info("User Disconnected : " + username);
+            logger.info("User Disconectado : " + username);
 
             ChatMessage chatMessage = new ChatMessage();
             chatMessage.setType(ChatMessage.MessageType.LEAVE);

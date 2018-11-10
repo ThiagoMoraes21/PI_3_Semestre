@@ -1,7 +1,9 @@
 package com.example.crmsolutionsproject.model;
 
-//  ChatMessage model is the message payload that will be
-//  exchanged between the clients and the server.
+/*
+*   ChatMessage Model é a "carga" (payload) da menssagem que
+*   será trocada pelo cliente e o servidor.
+* */
 
 public class ChatMessage {
     private MessageType type;

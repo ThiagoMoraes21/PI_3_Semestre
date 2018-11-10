@@ -3,6 +3,8 @@ package com.example.crmsolutionsproject;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+// INICIALIZA A APLICAÇÃO!
+
 @SpringBootApplication
 public class CrmsolutionsProjectApplication {
 
