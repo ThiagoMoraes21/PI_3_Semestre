@@ -1,3 +1,3 @@
 Projeto Integrado 3º Semestre
 
-Software de CRM (Costumer Relationship Management)
+Software de ERP (Enterprise Resource Planning).
